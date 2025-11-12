@@ -263,7 +263,7 @@ export default function Portfolio() {
               My analytical journey combines statistical modeling, machine learning, and business intelligence to solve real-world problems. I excel at building predictive models, creating interactive dashboards, and performing advanced analytics including time series forecasting, customer segmentation, and trend analysis.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              When I'm not analyzing data, you can find me exploring new data science techniques, contributing to analytics communities, or working on personal projects that leverage machine learning to solve interesting problems.
+              I like exploring new areas in data science and experimenting with projects that help me learn by doing.
             </p>
           </div>
         </div>

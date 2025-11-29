@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Github, Linkedin, ExternalLink, Download, Code, Cpu, Database, Globe, X, Menu, ChevronDown, BookOpen, BarChart3, FileSpreadsheet, TrendingUp, Brain, Sigma } from 'lucide-react';
+// force vercel redeploy
 
 // Main App Component
 export default function Portfolio() {

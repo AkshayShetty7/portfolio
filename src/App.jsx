@@ -42,97 +42,90 @@ export default function Portfolio() {
 
   // Form submission handler
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const response = await fetch("https://formspree.io/f/xrbrgyyl", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(formData)
-  });
+    const response = await fetch("https://formspree.io/f/xrbrgyyl", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
 
-  if (response.ok) {
-    setFormStatus("Message sent successfully!");
-    setFormData({ name: "", email: "", message: "" });
-  } else {
-    setFormStatus("Failed to send message. Try again.");
-  }
+    if (response.ok) {
+      setFormStatus("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      setFormStatus("Failed to send message. Try again.");
+    }
 
-  setTimeout(() => setFormStatus(""), 3000);
-};
-
+    setTimeout(() => setFormStatus(""), 3000);
+  };
 
   // Skills data - Updated for Data Analyst/Data Scientist
-const skills = [
-  { name: 'Python', icon: <Code className="w-6 h-6" /> },
-  { name: 'SQL', icon: <Database className="w-6 h-6" /> },
-  { name: 'Machine Learning', icon: <Brain className="w-6 h-6" /> },
-  { name: 'Deep Learning', icon: <Cpu className="w-6 h-6" /> },
-  { name: 'GenAI / LLMs', icon: <Globe className="w-6 h-6" /> },
-  { name: 'Power BI', icon: <BarChart3 className="w-6 h-6" /> },
-  { name: 'MS Excel', icon: <FileSpreadsheet className="w-6 h-6" /> },
-  { name: 'Time Series Analysis', icon: <TrendingUp className="w-6 h-6" /> },
-  { name: 'Statistics', icon: <Sigma className="w-6 h-6" /> },
-];
-
-
-
-
-
+  const skills = [
+    { name: 'Python', icon: <Code className="w-6 h-6" /> },
+    { name: 'SQL', icon: <Database className="w-6 h-6" /> },
+    { name: 'Machine Learning', icon: <Brain className="w-6 h-6" /> },
+    { name: 'Deep Learning', icon: <Cpu className="w-6 h-6" /> },
+    { name: 'GenAI / LLMs', icon: <Globe className="w-6 h-6" /> },
+    { name: 'Power BI', icon: <BarChart3 className="w-6 h-6" /> },
+    { name: 'MS Excel', icon: <FileSpreadsheet className="w-6 h-6" /> },
+    { name: 'Time Series Analysis', icon: <TrendingUp className="w-6 h-6" /> },
+    { name: 'Statistics', icon: <Sigma className="w-6 h-6" /> },
+  ];
 
   // Projects data
   const projects = [
-  {
-    id: 1,
-    title: 'Customer Segmentation & Personalized Marketing (Clustering + BI)',
-    description: 'ML-based customer clustering and behavior analysis',
-    tech: ['Python', 'Pandas', 'Matplotlib', 'Scikit-learn', 'Power BI'],
-    image: 'https://www.xsights.co.uk/wp-content/uploads/2024/05/musteri-segmentasyonu.png',
-    details:
-      'Performed RFM analysis and K-means clustering on customer transaction data. Identified 5 distinct customer segments, enabling targeted marketing campaigns that increased customer retention by 28%.',
-    link: 'https://github.com/AkshayShetty7/Customer-Segmentation-Personalized-Marketing-in-Retail',
-  },
-  {
-    id: 2,
-    title: 'Chronic Kidney Disease Prediction (ML Classification)',
-    description:
-      'Machine learning–based classification model to predict the likelihood of chronic kidney disease using clinical and laboratory data.',
-    tech: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Streamlit'],
-    image:
-      'https://www.citlprojects.com/hubfs/featured-image/analysis-of-chronic-kidney-disease-prediction-1024x683.webp',
-    details:
-      'Developed an ML model using logistic regression and decision trees to predict CKD likelihood with 96% accuracy. Deployed as an interactive Streamlit app for clinicians to assess risk in real-time.',
-    link: 'https://github.com/AkshayShetty7/Chronic-Kidney-Disease',
-  },
-  {
-    id: 3,
-    title: 'Marketing Campaign Analysis (SQL + Power BI)',
-    description: 'Data-driven insights to optimize marketing campaign performance.',
-    tech: ['Power BI', 'SQL', 'Excel'],
-    image: 'https://www.aimtechnologies.co/wp-content/uploads/2024/07/Campaign-Analytics-Tools.jpg',
-    details:
-      'Created an automated data pipeline that extracts, transforms, and loads financial data from multiple sources. Reduced manual reporting time by 70% and improved data accuracy through validation checks.',
-    link: 'https://github.com/AkshayShetty7/Marketing_Campaign_Analysis',
-  },
-];
+    {
+      id: 1,
+      title: 'Customer Segmentation & Personalized Marketing (Clustering + BI)',
+      description: 'ML-based customer clustering and behavior analysis',
+      tech: ['Python', 'Pandas', 'Matplotlib', 'Scikit-learn', 'Power BI'],
+      image: 'https://www.xsights.co.uk/wp-content/uploads/2024/05/musteri-segmentasyonu.png',
+      details:
+        'Performed RFM analysis and K-means clustering on customer transaction data. Identified 5 distinct customer segments, enabling targeted marketing campaigns that increased customer retention by 28%.',
+      link: 'https://github.com/AkshayShetty7/Customer-Segmentation-Personalized-Marketing-in-Retail',
+    },
+    {
+      id: 2,
+      title: 'Chronic Kidney Disease Prediction (ML Classification)',
+      description:
+        'Machine learning–based classification model to predict the likelihood of chronic kidney disease using clinical and laboratory data.',
+      tech: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Streamlit'],
+      image:
+        'https://www.citlprojects.com/hubfs/featured-image/analysis-of-chronic-kidney-disease-prediction-1024x683.webp',
+      details:
+        'Developed an ML model using logistic regression and decision trees to predict CKD likelihood with 96% accuracy. Deployed as an interactive Streamlit app for clinicians to assess risk in real-time.',
+      link: 'https://github.com/AkshayShetty7/Chronic-Kidney-Disease',
+    },
+    {
+      id: 3,
+      title: 'Marketing Campaign Analysis (SQL + Power BI)',
+      description: 'Data-driven insights to optimize marketing campaign performance.',
+      tech: ['Power BI', 'SQL', 'Excel'],
+      image: 'https://www.aimtechnologies.co/wp-content/uploads/2024/07/Campaign-Analytics-Tools.jpg',
+      details:
+        'Created an automated data pipeline that extracts, transforms, and loads financial data from multiple sources. Reduced manual reporting time by 70% and improved data accuracy through validation checks.',
+      link: 'https://github.com/AkshayShetty7/Marketing_Campaign_Analysis',
+    },
+  ];
 
   // Blogs data
   const blogs = [
-  {
-    id: 1,
-    title: 'Beyond Accuracy: How ROC-AUC Reveals the True Power of Your Model',
-    excerpt:
-      'Discover how ROC-AUC goes beyond accuracy to evaluate model performance, revealing a classifier’s true ability to distinguish between classes with deeper insight and reliability...',
-    date: 'Sep 30, 2025',
-    readTime: '5 min read',
-    image:
-      'https://cdn.prod.website-files.com/660ef16a9e0687d9cc27474a/662c42679571ef35419c9968_64760779d5dc484958a3f917_classification_metrics_017-min.png',
-    tags: ['Machine Learning', 'Model Evaluation', 'ROC-AUC', 'Data Science'],
-    link: 'https://dev.to/akshay_shetty_686041/from-toy-boxes-to-code-a-simple-intro-to-roc-auc-omf',
-  },
-];
-
+    {
+      id: 1,
+      title: 'Beyond Accuracy: How ROC-AUC Reveals the True Power of Your Model',
+      excerpt:
+        'Discover how ROC-AUC goes beyond accuracy to evaluate model performance, revealing a classifier\'s true ability to distinguish between classes with deeper insight and reliability...',
+      date: 'Sep 30, 2025',
+      readTime: '5 min read',
+      image:
+        'https://cdn.prod.website-files.com/660ef16a9e0687d9cc27474a/662c42679571ef35419c9968_64760779d5dc484958a3f917_classification_metrics_017-min.png',
+      tags: ['Machine Learning', 'Model Evaluation', 'ROC-AUC', 'Data Science'],
+      link: 'https://dev.to/akshay_shetty_686041/from-toy-boxes-to-code-a-simple-intro-to-roc-auc-omf',
+    },
+  ];
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-gray-100 min-h-screen font-sans">
@@ -189,7 +182,7 @@ const skills = [
       <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 relative">
         <div className="max-w-4xl text-center animate-fadeIn">
           <div className="mb-6 animate-slideDown">
-            {/* Profile Photo - Updated to use akshay.jpg from public folder */}
+            {/* Profile Photo */}
             <div className="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-cyan-500 shadow-lg shadow-cyan-500/50">
               <img 
                 src="/akshay.jpg" 
@@ -201,7 +194,7 @@ const skills = [
               Akshay Shetty
             </h1>
             <p className="text-3xl md:text-3xl text-gray-300 mb-6">
-              Data Analyst  &  AI/ML Enthusiast
+              Data Analyst & AI/ML Enthusiast
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
               Transforming data into actionable insights through analytics and machine learning
@@ -249,13 +242,10 @@ const skills = [
               <Mail className="w-6 h-6" />
             </a>
           </div>
-
-
-  
         </div>
       </section>
 
-      {/* About Section - Updated for Data Analyst/Data Scientist */}
+      {/* About Section */}
       <section id="about" className="min-h-screen flex items-center px-6 py-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -263,18 +253,19 @@ const skills = [
           </h2>
           <div className="bg-slate-800/50 backdrop-blur rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all">
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              I'm a data analyst and aspiring AI/ML engineer with hands-on experience in Python, SQL, and data visualization tools like Power BI. I enjoy working with data and uncovering meaningful patterns.            </p>
+              I'm a data analyst and aspiring AI/ML engineer with hands-on experience in Python, SQL, and data visualization tools like Power BI. I enjoy working with data and uncovering meaningful patterns.
+            </p>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
               My analytical journey combines statistical modeling, machine learning, and business intelligence to solve real-world problems. I excel at building predictive models, creating interactive dashboards, and performing advanced analytics including time series forecasting, customer segmentation, and trend analysis.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-               I'm actively exploring AI, deep learning, and GenAI while learning through practical projects and experimentation.
+              I'm actively exploring AI, deep learning, and GenAI while learning through practical projects and experimentation.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Skills Section - Updated without percentage bars */}
+      {/* Skills Section */}
       <section id="skills" className="min-h-screen flex items-center px-6 py-20">
         <div className="max-w-4xl mx-auto w-full">
           <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -378,17 +369,14 @@ const skills = [
                 ))}
               </div>
               <a
-  href={selectedProject.link}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/50 transition-all"
->
-  <ExternalLink className="w-4 h-4" />
-  View Project
-</a>
-
-
-
+                href={selectedProject.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/50 transition-all"
+              >
+                <ExternalLink className="w-4 h-4" />
+                View Project
+              </a>
             </div>
           </div>
         </div>
@@ -403,51 +391,50 @@ const skills = [
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogs.map((blog) => (
               <a
-  key={blog.id}
-  href={blog.link}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-slate-800/50 backdrop-blur rounded-2xl overflow-hidden border border-slate-700/50 hover:border-cyan-500/50 transition-all hover:transform hover:scale-105 cursor-pointer group block"
->
-  <div className="relative overflow-hidden h-48">
-    <img 
-      src={blog.image} 
-      alt={blog.title}
-      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-    />
-    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60" />
-  </div>
-  <div className="p-6">
-    <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
-      <span className="flex items-center gap-1">
-        <BookOpen className="w-4 h-4" />
-        {blog.readTime}
-      </span>
-      <span>{blog.date}</span>
-    </div>
-    <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">
-      {blog.title}
-    </h3>
-    <p className="text-gray-400 mb-4">{blog.excerpt}</p>
-    <div className="flex flex-wrap gap-2">
-      {blog.tags.map((tag, idx) => (
-        <span 
-          key={idx}
-          className="px-3 py-1 bg-slate-700 rounded-full text-sm text-cyan-400"
-        >
-          {tag}
-        </span>
-      ))}
-    </div>
-  </div>
-</a>
-
+                key={blog.id}
+                href={blog.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-slate-800/50 backdrop-blur rounded-2xl overflow-hidden border border-slate-700/50 hover:border-cyan-500/50 transition-all hover:transform hover:scale-105 cursor-pointer group block"
+              >
+                <div className="relative overflow-hidden h-48">
+                  <img 
+                    src={blog.image} 
+                    alt={blog.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60" />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                    <span className="flex items-center gap-1">
+                      <BookOpen className="w-4 h-4" />
+                      {blog.readTime}
+                    </span>
+                    <span>{blog.date}</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">
+                    {blog.title}
+                  </h3>
+                  <p className="text-gray-400 mb-4">{blog.excerpt}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {blog.tags.map((tag, idx) => (
+                      <span 
+                        key={idx}
+                        className="px-3 py-1 bg-slate-700 rounded-full text-sm text-cyan-400"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Resume Section - Updated to link to Resume.pdf in public folder */}
+      {/* Resume Section */}
       <section id="resume" className="min-h-screen flex items-center px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -457,17 +444,14 @@ const skills = [
             <p className="text-lg text-gray-300 mb-8">
               Download my complete resume to learn more about my experience, education, and accomplishments.
             </p>
-          <a 
-            href="/Resume.pdf?v=2"
-            download="Akshay_Shetty_Resume.pdf"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all transform hover:scale-105"
-          >
-            <Download className="w-6 h-6" />
-            Download Resume (PDF)
-          </a>
-
-
-              
+            <a 
+              href="/Resume.pdf?v=3"
+              download="Resume.pdf"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all transform hover:scale-105"
+            >
+              <Download className="w-6 h-6" />
+              Download Resume (PDF)
+            </a>
           </div>
         </div>
       </section>

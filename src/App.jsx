@@ -457,15 +457,17 @@ const skills = [
             <p className="text-lg text-gray-300 mb-8">
               Download my complete resume to learn more about my experience, education, and accomplishments.
             </p>
-            <a 
-  href="/Resume.pdf?v=2" 
-  download="Akshay_Shetty_Resume.pdf"
-  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all transform hover:scale-105"
->
+          <a 
+            href="/Resume.pdf?v=2"
+            download="Akshay_Shetty_Resume.pdf"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all transform hover:scale-105"
+          >
+            <Download className="w-6 h-6" />
+            Download Resume (PDF)
+          </a>
 
-              <Download className="w-6 h-6" />
-              Download Resume (PDF)
-            </a>
+
+              
           </div>
         </div>
       </section>

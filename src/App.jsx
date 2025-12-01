@@ -255,17 +255,18 @@ export default function Portfolio() {
           </h2>
           <div className="bg-slate-800/50 backdrop-blur rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all">
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              I'm a data analyst and aspiring AI/ML engineer with hands-on experience in Python, SQL, and data visualization tools like Power BI. I enjoy working with data and uncovering meaningful patterns.
+              I'm an aspiring Data Scientist and AI/ML Engineer skilled in Python, SQL, and data visualization tools like Power BI. I enjoy turning data into clear insights.
             </p>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              My analytical journey combines statistical modeling, machine learning, and business intelligence to solve real-world problems. I excel at building predictive models, creating interactive dashboards, and performing advanced analytics including time series forecasting, customer segmentation, and trend analysis.
+              I work with statistical modeling, machine learning, and business intelligence to solve real-world problems through predictive models and interactive dashboards.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              I'm actively exploring AI, deep learning, and GenAI while learning through practical projects and experimentation.
+              I'm continuously learning and exploring AI, deep learning, and GenAI through hands-on projects.
             </p>
           </div>
         </div>
       </section>
+
 
       {/* Skills Section */}
       <section id="skills" className="min-h-screen flex items-center px-6 py-20">

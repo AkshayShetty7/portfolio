@@ -196,7 +196,7 @@ export default function Portfolio() {
               Akshay Shetty
             </h1>
             <p className="text-3xl md:text-3xl text-gray-300 mb-6">
-              Data Analyst & AI/ML Enthusiast
+              Aspiring Data Scientist & AI/ML Enthusiast
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
               Transforming data into actionable insights through analytics and machine learning
